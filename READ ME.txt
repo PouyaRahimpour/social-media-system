@@ -1,0 +1,6 @@
+Author: Pouya Rahimpour
+
+Explanations: Social Application System
+		  Final Project of workshop for Advanced Programming
+		  Isfahan University
+Summer 2022
