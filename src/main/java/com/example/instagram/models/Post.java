@@ -5,20 +5,20 @@ import java.util.ArrayList;
 public class Post {
     User user;
     String content;
-    int score;
     String imagePath;
+    String time;
+
     private void firstSetUP() {
         imagePath = "C:/Users/Asus/IdeaProjects/instagram/src/main/resources/com/example/instagram/images/insta_post.png";
-        score = 0;
     }
     public Post() {
         firstSetUP();
     }
-    public Post(String content, int score, String imagePath) {
+    public Post(String content, String imagePath, String time) {
         firstSetUP();
         this.imagePath = imagePath;
         this.content = content;
-        this.score = score;
+        this.time = time;
     }
 
     public User getUser() {
@@ -37,12 +37,12 @@ public class Post {
         this.content = content;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public int getScore() {
-        return score;
+    public String getTime() {
+        return time;
     }
 
     public String getImagePath() {

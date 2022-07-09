@@ -40,7 +40,6 @@ public class AddPostPageController implements Initializable {
         Post p = new Post();
         p.setContent(editor.getHtmlText());
         p.setImagePath(path);
-        p.setScore(0);
         p.setUser(user);
         SqlManager.getInstance().addPost(p);
         back();

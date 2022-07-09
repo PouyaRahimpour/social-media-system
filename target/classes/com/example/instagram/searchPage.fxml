@@ -40,6 +40,7 @@
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="19.0" layoutY="189.0" stroke="#ebebeb" strokeType="INSIDE" style="-fx-fill: #EBEBEB;" width="22.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="14.0" layoutX="29.0" layoutY="187.0" stroke="#ebebeb" strokeType="INSIDE" style="-fx-fill: #EBEBEB;" width="145.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="39.0" layoutY="318.0" stroke="#ebebeb" strokeType="INSIDE" style="-fx-fill: #EBEBEB;" width="126.0" />
       <Label fx:id="fullName" alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="319.0" prefHeight="18.0" prefWidth="126.0">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />

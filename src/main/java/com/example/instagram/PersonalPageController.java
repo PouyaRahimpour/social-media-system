@@ -73,6 +73,7 @@ public class PersonalPageController implements Initializable {
         SearchPageController.setAutoSearchUsername(username);
         PageSwitcher.switchToPage("searchPage.fxml");
     }
+
     public void switchToSearchPage() throws IOException {
         SearchPageController.setUser(USERNAME);
         PageSwitcher.switchToPage("searchPage.fxml");
@@ -253,6 +254,9 @@ public class PersonalPageController implements Initializable {
             });
             try {
                 ImageView iv = new ImageView(new Image(new FileInputStream(p.getImagePath())));
+                iv.setOnMouseClicked(mouseEvent -> {
+                    editPost(p);
+                });
                 iv.setFitWidth(150);
                 iv.setFitHeight(150);
                 pane.getChildren().add(iv);
@@ -466,5 +470,20 @@ public class PersonalPageController implements Initializable {
     public void switchToRequestsPage() throws IOException {
         RequestsPageController.setUsername(USERNAME);
         PageSwitcher.switchToPage("requestsPage.fxml");
+    }
+
+    public void switchToMessagePage() throws IOException {
+        MessagePageController.setUser(user);
+        PageSwitcher.switchToPage("messagePage.fxml");
+    }
+
+    public void editPost(Post post) {
+        try {
+            EditPostPageController.setUser(user);
+            EditPostPageController.setPost(post);
+            PageSwitcher.switchToPage("editPostPage.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

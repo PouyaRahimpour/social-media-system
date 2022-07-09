@@ -38,7 +38,7 @@ public class RequestsPageController implements Initializable {
             User u = request.getFollower();
 
             Pane pane = new Pane();
-            pane.setPrefSize(380, 80);
+            pane.setPrefSize(430, 80);
             pane.setOpacity(0.8);
             pane.setOnMouseEntered(mouseEvent -> {
                 pane.setOpacity(1);
@@ -152,6 +152,7 @@ public class RequestsPageController implements Initializable {
         requests = SqlManager.getInstance().getFollowRequestsFollowersOf(USERNAME);
         showRequests();
     }
+
     public void search(String username) throws IOException {
         SearchPageController.setUser(USERNAME);
         SearchPageController.setAutoSearchUsername(username);

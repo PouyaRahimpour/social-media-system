@@ -139,6 +139,9 @@ public class SearchPageController implements Initializable {
                 });
                 try {
                     ImageView iv = new ImageView(new Image(new FileInputStream(p.getImagePath())));
+                    iv.setOnMouseClicked(mouseEvent -> {
+                        viewPost(p);
+                    });
                     iv.setFitWidth(150);
                     iv.setFitHeight(150);
                     pane.getChildren().add(iv);
@@ -193,5 +196,16 @@ public class SearchPageController implements Initializable {
         postLabel.setVisible(b);
         followingsLabel.setVisible(b);
         followersLabel.setVisible(b);
+    }
+
+    public void viewPost(Post p) {
+        ViewPostPageController.setUser(user);
+        ViewPostPageController.setPost(p);
+        try {
+            PageSwitcher.switchToPage("viewPostPage.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
